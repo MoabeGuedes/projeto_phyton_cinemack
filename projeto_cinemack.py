@@ -26,27 +26,45 @@ def entrada():
 def compraring(op):
     if op == 1:
         global contf1s1
-        
+        tempf1s1 = 0
         print(f"Assentos disponíveis para Filme 1 - Sessão 1: {contf1s1}\nEscolha o tipo de ingresso (1: Inteira, 2: Meia, 3: VIP, 4: Confirmar compra, 5: Voltar): ")
         while True:
-            tipoing = int(input())
+            tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 ingressos.append(20)
                 f1s1.append("int")
-            if tipoing == 2:
+                contf1s1 -= 1
+                tempf1s1 += 1
+            elif tipoing == 2:
                 ingressos.append(10)
                 f1s1.append("meia")
-            if tipoing == 3:
+                contf1s1 -= 1
+                tempf1s1 += 1
+            elif tipoing == 3:
                 ingressos.append(30)
                 f1s1.append("vip")
-            if tipoing == 4:
+                contf1s1 -= 1
+                tempf1s1 += 1
+            elif tipoing == 4:
+                print(f"Compra confirmada. Total de ingressos comprados: {tempf1s1}")
                 break
-            if tipoing == 5:
-                compraring(entrada())
+            elif tipoing == 5:
+                contf1s1 += tempf1s1
+                for i in range(tempf1s1 - 1, -1, -1):
+                    del ingressos[-1]
+                    del f1s1[-1]    
+                return
+
+            else:
+                print("Opção inválida, por favor escolha novamente.")
 
 def main():
-    op = entrada()
-    compraring(op)
-    print(ingressos, f1s1)
-    
+    while True: 
+        op = entrada()
+        if op == 8:
+            print("relatório...")
+            break
+        compraring(op)
+        print(ingressos, f1s1)
+
 main()
