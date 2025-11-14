@@ -20,7 +20,9 @@ ingf2s2 = []
 ingf3s1 = []
 ingf3s2 = []
 
-notas = []
+notas1 = []
+notas2 = []
+notas3 = []
 
 def entrada():
     print("Menu Principal\n1. Comprar ingressos para Filme 1 - Sessão 1\n2. Comprar ingressos para Filme 1 - Sessão 2\n3. Comprar ingressos para Filme 2 - Sessão 1\n4. Comprar ingressos para Filme 2 - Sessão 2\n5. Comprar ingressos para Filme 3 - Sessão 1\n6. Comprar ingressos para Filme 3 - Sessão 2\n7. Avaliar um filme\n8. Encerrar o dia e exibir o relatório\n")
@@ -39,7 +41,12 @@ def avaliacao_filme():
     while nota < 0 or nota > 10:
         print("Nota inválida. Por favor, tente novamente.")
         nota = int(input("Em uma escala de 0 a 10, como você avaliaria o filme? "))
-        notas.append(nota)
+    if filme == 1:
+        notas1.append(nota)
+    elif filme == 2:
+        notas2.append(nota)
+    elif filme == 3:
+        notas3.append(nota)
     print(f"Obrigado por avaliar o filme '{filme}' com a nota {nota}!")
 
 def compraring(op):
@@ -239,16 +246,6 @@ def compraring(op):
     elif op == 7: #Avaliação
         avaliacao_filme()
 
-'''Relatório Final
-Filme 1 - Sessão 1:
-Quantidade de ingressos vendidos
-- Inteira:
-- Meia:
-- VIP:
-Receita por tipo (Sessão 1):
-- Inteira: R$
-- Meia: R$
-- VIP: R$'''
 
 def relatorio():
     print("-----RELATORIO FINAL-----")
@@ -292,6 +289,9 @@ def relatorio():
     print(f"RECEITA POR TIPO (Sessão {cont})")
     print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
     
+    quant_int = quant_meia = quant_vip = 0
+    valor_int = valor_meia = valor_vip = 0
+    
     print(f"Filme 2 - Sessão 1")
     for j in range(len(f2s1)):
         if f2s1[j] == "int":
@@ -329,6 +329,9 @@ def relatorio():
     print(f"RECEITA POR TIPO (Sessão {cont})")
     print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
 
+    quant_int = quant_meia = quant_vip = 0
+    valor_int = valor_meia = valor_vip = 0
+
     print(f"Filme 3 - Sessão 1")
     for j in range(len(f3s1)):
         if f3s1[j] == "int":
@@ -365,6 +368,23 @@ def relatorio():
     print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
     print(f"RECEITA POR TIPO (Sessão {cont})")
     print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
+
+    for j in range(len(notas1)):
+        media1 = sum(notas1) / len(notas1)
+    print(f"Média de avaliações:\nFilme 1: {media1:.1f}")
+    
+    for j in range(len(notas2)):
+        media2 = sum(notas2) / len(notas2) 
+    print(f"Filme 2: {media2:.1f}")
+
+    for j in range(len(notas3)):
+        media3 = sum(notas3) / len(notas3) 
+    print(f"Filme 3: {media3:.1f}")         
+
+    total_ingressos = (len(f1s1) + len(f1s2) + len(f2s1) + len(f2s2) + len(f3s1) + len(f3s2))
+    print(f"Total de ingressos vendidos no dia: {total_ingressos}")
+    receita_total = sum(ingf1s1) + sum(ingf1s2) + sum(ingf2s1) + sum(ingf2s2) + sum(ingf3s1) + sum(ingf3s2)
+    print(f"Receita total do dia: {receita_total}")
 
 def main():
     while True: 
