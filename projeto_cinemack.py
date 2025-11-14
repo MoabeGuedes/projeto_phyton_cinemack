@@ -239,15 +239,138 @@ def compraring(op):
     elif op == 7: #Avaliação
         avaliacao_filme()
 
+'''Relatório Final
+Filme 1 - Sessão 1:
+Quantidade de ingressos vendidos
+- Inteira:
+- Meia:
+- VIP:
+Receita por tipo (Sessão 1):
+- Inteira: R$
+- Meia: R$
+- VIP: R$'''
 
+def relatorio():
+    print("-----RELATORIO FINAL-----")
+    cont = 1
+    quant_int = quant_meia = quant_vip = 0
+    valor_int = valor_meia = valor_vip = 0
+    print(f"Filme 1 - Sessão 1")
+    for j in range(len(f1s1)):
+        if f1s1[j] == "int":
+            quant_int += 1
+            valor_int += 20
+        elif f1s1[j] == "meia":
+            quant_meia += 1
+            valor_meia += 10
+        elif f1s1[j] == "vip":
+            quant_vip += 1
+            valor_vip += 30
+        
+    print("Quantidade de ingressos vendidos")
+    print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
+    print(f"RECEITA POR TIPO (Sessão {cont})")
+    print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
+    
+    quant_int = quant_meia = quant_vip = 0
+    valor_int = valor_meia = valor_vip = 0
 
+    print(f"Filme 1 - Sessão 2")
+    for j in range(len(f1s2)):
+        if f1s2[j] == "int":
+            quant_int += 1
+            valor_int += 20
+        elif f1s2[j] == "meia":
+            quant_meia += 1
+            valor_meia += 10
+        elif f1s2[j] == "vip":
+            quant_vip += 1
+            valor_vip += 30
 
+    print("Quantidade de ingressos vendidos")
+    print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
+    print(f"RECEITA POR TIPO (Sessão {cont})")
+    print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
+    
+    print(f"Filme 2 - Sessão 1")
+    for j in range(len(f2s1)):
+        if f2s1[j] == "int":
+            quant_int += 1
+            valor_int += 20
+        elif f2s1[j] == "meia":
+            quant_meia += 1
+            valor_meia += 10
+        elif f2s1[j] == "vip":
+            quant_vip += 1
+            valor_vip += 30
+        
+    print("Quantidade de ingressos vendidos")
+    print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
+    print(f"RECEITA POR TIPO (Sessão {cont})")
+    print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
+
+    quant_int = quant_meia = quant_vip = 0
+    valor_int = valor_meia = valor_vip = 0
+
+    print(f"Filme 2 - Sessão 2")
+    for j in range(len(f2s2)):
+        if f2s2[j] == "int":
+            quant_int += 1
+            valor_int += 20
+        elif f2s2[j] == "meia":
+            quant_meia += 1
+            valor_meia += 10
+        elif f2s2[j] == "vip":
+            quant_vip += 1
+            valor_vip += 30
+
+    print("Quantidade de ingressos vendidos")
+    print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
+    print(f"RECEITA POR TIPO (Sessão {cont})")
+    print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
+
+    print(f"Filme 3 - Sessão 1")
+    for j in range(len(f3s1)):
+        if f3s1[j] == "int":
+            quant_int += 1
+            valor_int += 20
+        elif f3s1[j] == "meia":
+            quant_meia += 1
+            valor_meia += 10
+        elif f3s1[j] == "vip":
+            quant_vip += 1
+            valor_vip += 30
+        
+    print("Quantidade de ingressos vendidos")
+    print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
+    print(f"RECEITA POR TIPO (Sessão {cont})")
+    print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
+
+    quant_int = quant_meia = quant_vip = 0
+    valor_int = valor_meia = valor_vip = 0
+
+    print(f"Filme 3 - Sessão 2")
+    for j in range(len(f3s2)):
+        if f3s2[j] == "int":
+            quant_int += 1
+            valor_int += 20
+        elif f3s2[j] == "meia":
+            quant_meia += 1
+            valor_meia += 10
+        elif f3s2[j] == "vip":
+            quant_vip += 1
+            valor_vip += 30
+
+    print("Quantidade de ingressos vendidos")
+    print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
+    print(f"RECEITA POR TIPO (Sessão {cont})")
+    print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
 
 def main():
     while True: 
         op = entrada()
         if op == 8:
-            print("relatório...")
+            relatorio()
             break
         compraring(op)
 
