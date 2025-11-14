@@ -20,6 +20,8 @@ ingf2s2 = []
 ingf3s1 = []
 ingf3s2 = []
 
+notas = []
+
 def entrada():
     print("Menu Principal\n1. Comprar ingressos para Filme 1 - Sessão 1\n2. Comprar ingressos para Filme 1 - Sessão 2\n3. Comprar ingressos para Filme 2 - Sessão 1\n4. Comprar ingressos para Filme 2 - Sessão 2\n5. Comprar ingressos para Filme 3 - Sessão 1\n6. Comprar ingressos para Filme 3 - Sessão 2\n7. Avaliar um filme\n8. Encerrar o dia e exibir o relatório\n")
     op = int(input("Escolha a opção desejada: "))
@@ -27,6 +29,18 @@ def entrada():
         op = int(input("Opção inválida, escolha a opção desejada (1-8): "))
     return op
 
+def avaliacao_filme():
+    print("Obrigado por assistir ao filme no CineMack!")
+    filme = int(input("Por favor, digite o numero do filme que você assistiu: "))
+    while filme < 1 or filme > 3:
+        print("Filme inválido. Por favor, tente novamente.")
+        filme = int(input("Por favor, digite o numero do filme que você assistiu: "))
+    nota = int(input("Em uma escala de 0 a 10, como você avaliaria o filme? "))
+    while nota < 0 or nota > 10:
+        print("Nota inválida. Por favor, tente novamente.")
+        nota = int(input("Em uma escala de 0 a 10, como você avaliaria o filme? "))
+        notas.append(nota)
+    print(f"Obrigado por avaliar o filme '{filme}' com a nota {nota}!")
 
 def compraring(op):
     if op == 1: #Filme 1 - Sessão 1
@@ -222,6 +236,13 @@ def compraring(op):
                 return
             else:
                 print("Opção inválida, por favor escolha novamente.")
+    elif op == 7: #Avaliação
+        avaliacao_filme()
+
+
+
+
+
 def main():
     while True: 
         op = entrada()
@@ -229,6 +250,6 @@ def main():
             print("relatório...")
             break
         compraring(op)
-        print(ingf1s1, f1s1)
+
 
 main()
