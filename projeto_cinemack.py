@@ -369,14 +369,13 @@ def relatorio():
     print(f"RECEITA POR TIPO (Sessão {cont})")
     print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
 
+    media1 = media2 = media3 = 0
     for j in range(len(notas1)):
         media1 = sum(notas1) / len(notas1)
     print(f"Média de avaliações:\nFilme 1: {media1:.1f}")
-    
     for j in range(len(notas2)):
         media2 = sum(notas2) / len(notas2) 
     print(f"Filme 2: {media2:.1f}")
-
     for j in range(len(notas3)):
         media3 = sum(notas3) / len(notas3) 
     print(f"Filme 3: {media3:.1f}")         
