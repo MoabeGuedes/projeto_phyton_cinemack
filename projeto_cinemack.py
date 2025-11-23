@@ -1,4 +1,7 @@
 #Projeto 2 (Guilherme Gomes Pinho - Moabe da Silva Guedes Rêgo - Ryan Silva de Sousa)
+
+# Inicialização das variáveis globais
+# Listas para armazenar os tipos de ingressos vendidos por sessão
 f1s1 = []
 f1s2 = []
 f2s1 = []
@@ -6,6 +9,7 @@ f2s2 = []
 f3s1 = []
 f3s2 = []
 
+# Contadores de assentos disponíveis por sessão
 contf1s1 = 50
 contf1s2 = 50
 contf2s1 = 50
@@ -13,6 +17,7 @@ contf2s2 = 50
 contf3s1 = 50
 contf3s2 = 50
 
+# Listas para armazenar os valores dos ingressos vendidos por sessão
 ingf1s1 = []
 ingf1s2 = []
 ingf2s1 = []
@@ -20,10 +25,12 @@ ingf2s2 = []
 ingf3s1 = []
 ingf3s2 = []
 
+# Listas para armazenar as avaliações dos filmes
 notas1 = []
 notas2 = []
 notas3 = []
 
+# Função de entrada do sistema, com menu principal e validação de opções
 def entrada():
     print("\n\nBem vindo ao CineMack! Qual é o seu plano para hoje?")
     print("====================================================")
@@ -34,7 +41,7 @@ def entrada():
         op = int(input("Opção inválida, escolha a opção desejada (1-8): "))
     return op
     
-
+# Função para avaliação dos filmes com validação de entradas
 def avaliacao_filme():
     print("Obrigado por assistir ao filme no CineMack!")
     filme = int(input("Por favor, digite o numero do filme que você assistiu: "))
@@ -53,6 +60,7 @@ def avaliacao_filme():
         notas3.append(nota)
     print(f"Obrigado por avaliar o filme '{filme}' com a nota {nota}!")
 
+# Função para compra de ingressos por sessão, com controle de assentos, confirmação de compra e opção de voltar ao menu principal
 def compraring(op):
     if op == 1: #Filme 1 - Sessão 1
         global contf1s1
@@ -277,9 +285,9 @@ def compraring(op):
     elif op == 7: #Avaliação
         avaliacao_filme()
 
-
+# Função para gerar o relatório diário com vendas e avaliações, detalhado por filme e sessão 
 def relatorio():
-    print("\n\n\n\n\n\n-----RELATORIO DIÁRIO-----")
+    print("\n\n\n\n\n\n-------------------------------------RELATORIO DIÁRIO-------------------------------------")
     cont = 1
     quant_int = quant_meia = quant_vip = 0
     valor_int = valor_meia = valor_vip = 0
@@ -294,15 +302,13 @@ def relatorio():
             valor_meia += 10
         elif f1s1[j] == "vip":
             quant_vip += 1
-            valor_vip += 30
-        
+            valor_vip += 30      
     print("Quantidade de ingressos vendidos:")
     print(f"Inteira - {quant_int}\nMeia - {quant_meia}\nVIP - {quant_vip}\n")
     print(f"Receita:")
     print(f"Inteira - R${valor_int}\nMeia - R${valor_meia}\nVIP - R${valor_vip}")
     print("===================================")
 
-    
     quant_int = quant_meia = quant_vip = 0
     valor_int = valor_meia = valor_vip = 0
 
@@ -318,12 +324,12 @@ def relatorio():
         elif f1s2[j] == "vip":
             quant_vip += 1
             valor_vip += 30
-
     print("Quantidade de ingressos vendidos:")
     print(f"Inteira - {quant_int}\nMeia - {quant_meia}\nVIP - {quant_vip}\n")
     print(f"Receita:")
     print(f"Inteira - R${valor_int}\nMeia - R${valor_meia}\nVIP - R${valor_vip}")
     print("===================================")
+   
     quant_int = quant_meia = quant_vip = 0
     valor_int = valor_meia = valor_vip = 0
     
@@ -338,8 +344,7 @@ def relatorio():
             valor_meia += 10
         elif f2s1[j] == "vip":
             quant_vip += 1
-            valor_vip += 30
-        
+            valor_vip += 30     
     print("Quantidade de ingressos vendidos:")
     print(f"Inteira - {quant_int}\nMeia - {quant_meia}\nVIP - {quant_vip}\n")
     print(f"Receita:")
@@ -361,7 +366,6 @@ def relatorio():
         elif f2s2[j] == "vip":
             quant_vip += 1
             valor_vip += 30
-
     print("Quantidade de ingressos vendidos:")
     print(f"Inteira - {quant_int}\nMeia - {quant_meia}\nVIP - {quant_vip}\n")
     print(f"Receita:")
@@ -382,8 +386,7 @@ def relatorio():
             valor_meia += 10
         elif f3s1[j] == "vip":
             quant_vip += 1
-            valor_vip += 30
-        
+            valor_vip += 30    
     print("Quantidade de ingressos vendidos:")
     print(f"Inteira - {quant_int}\nMeia - {quant_meia}\nVIP - {quant_vip}\n")
     print(f"Receita:")
@@ -405,21 +408,18 @@ def relatorio():
         elif f3s2[j] == "vip":
             quant_vip += 1
             valor_vip += 30
-
     print("Quantidade de ingressos vendidos:")
     print(f"Inteira - {quant_int}\nMeia - {quant_meia}\nVIP - {quant_vip}\n")
     print(f"Receita:")
     print(f"Inteira - R${valor_int}\nMeia - R${valor_meia}\nVIP - R${valor_vip}")
     print("===================================")
         
-
-    print(f"\n\n\n\nTOTAL DO DIA")
-    print("===================================")
+    print("\n\n\n\n===========TOTAL DO DIA===========")
     total_ingressos = (len(f1s1) + len(f1s2) + len(f2s1) + len(f2s2) + len(f3s1) + len(f3s2))
     print(f"Total de ingressos vendidos: {total_ingressos}")
     receita_total = sum(ingf1s1) + sum(ingf1s2) + sum(ingf2s1) + sum(ingf2s2) + sum(ingf3s1) + sum(ingf3s2)
     print(f"Receita total: R${receita_total}")
-    print("===================================")
+    print("==================================")
 
     
     print(f"\n\n\n\nMÉDIA DAS AVALIAÇÕES DOS FILMES")
@@ -434,7 +434,9 @@ def relatorio():
     for j in range(len(notas3)):
         media3 = sum(notas3) / len(notas3) 
     print(f"Clube da Luta: {media3:.1f}") 
+    print("===================================")
 
+# Função principal
 def main():
     while True: 
         op = entrada()
