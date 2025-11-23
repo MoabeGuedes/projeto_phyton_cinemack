@@ -81,8 +81,7 @@ def compraring(op):
                 tempf1s1 += 1
                 print("Ingresso escolhido: Vip | Valor: R$30")
             elif tipoing == 4:
-                print(f"Compra confirmada.\nTotal de ingressos comprados: {tempf1s1}\nValor da compra: R${sum(ingf1s1[-tempf1s1:])}")
-                print("Obrigado por comprar no CineMack!")
+                print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf1s1}\nValor da compra: R${sum(ingf1s1[-tempf1s1:])}")
                 print("====================================================")
                 break
             elif tipoing == 5:
