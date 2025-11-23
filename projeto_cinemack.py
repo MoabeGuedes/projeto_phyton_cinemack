@@ -10,12 +10,12 @@ f3s1 = []
 f3s2 = []
 
 # Contadores de assentos disponíveis por sessão
-contf1s1 = 50
-contf1s2 = 50
-contf2s1 = 40
-contf2s2 = 40
-contf3s1 = 30
-contf3s2 = 30
+contf1s1 = [0]*50
+contf1s2 = [0]*50
+contf2s1 = [0]*40
+contf2s2 = [0]*40
+contf3s1 = [0]*30
+contf3s2 = [0]*30
 
 # Listas para armazenar os valores dos ingressos vendidos por sessão
 ingf1s1 = []
@@ -95,42 +95,63 @@ def compraring(op):
     if op == 1: #Filme 1 - Sessão 1
         global contf1s1
         tempf1s1 = 0
+        tempocupado = []
         print("\n\nDe Volta para o Futuro - Sessão 1\n====================================================")
-        print(f"Assentos disponíveis: {contf1s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print(f"Assentos disponíveis: {contf1s1.count(0)}")
+        for i in range(len(contf1s1)):
+            if contf1s1[i] == 0:
+                print(f"[{i}]", end=" ")
+            else:
+                print("[X]", end=" ")
+        print("\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
         print("====================================================")
-        while True:
-            if contf1s1 <= 0:
-                print("Desculpe, não há mais assentos disponíveis para esta sessão.")
-                return
+        for i in range(len(contf1s1)):
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
-                ingf1s1.append(20)
-                f1s1.append("int")
-                contf1s1 -= 1
-                tempf1s1 += 1
+                lugar = int(input(f"Escolha o seu assento (0-50): "))
+                while contf1s1[lugar] == 1:
+                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                    lugar = int(input(f"Escolha o seu assento (0-50): "))
+                else:
+                    ingf1s1.append(20)
+                    f1s1.append("int")
+                    contf1s1[lugar] = 1
+                    tempf1s1 += 1
+                    tempocupado.append(lugar)
             elif tipoing == 2:
-                ingf1s1.append(10)
-                f1s1.append("meia")
-                contf1s1 -= 1
+                lugar = int(input(f"Escolha o seu assento (0-50): "))
+                while contf1s1[lugar] == 1:
+                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                    lugar = int(input(f"Escolha o seu assento (0-50): "))
+                else:
+                    ingf1s1.append(10)
+                    f1s1.append("meia")
+                    contf1s1[lugar] = 1
                 tempf1s1 += 1
+                tempocupado.append(lugar)
             elif tipoing == 3:
-                ingf1s1.append(30)
-                f1s1.append("vip")
-                contf1s1 -= 1
-                tempf1s1 += 1
+                lugar = int(input(f"Escolha o seu assento (0-50): "))
+                while contf1s1[lugar] == 1:
+                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                    lugar = int(input(f"Escolha o seu assento (0-50): "))
+                else:
+                    ingf1s1.append(30)
+                    f1s1.append("vip")
+                    contf1s1[lugar] = 1
+                    tempf1s1 += 1
+                    tempocupado.append(lugar)
             elif tipoing == 4:
                 print("====================================================")
                 print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf1s1}\nValor da compra: R${sum(ingf1s1[-tempf1s1:])}")
                 print("====================================================")
                 break
             elif tipoing == 5:
-                contf1s1 += tempf1s1
-                for i in range(tempf1s1 - 1, -1, -1):
-                    del ingf1s1[-1]
-                    del f1s1[-1]    
-            
+                for j in tempocupado:
+                    contf1s1[j] = 0
+                if tempf1s1 > 0:
+                    del ingf1s1[-tempf1s1:]
+                    del f1s1[-tempf1s1:]
                 return
-
             else:
                 print("Opção inválida, por favor escolha novamente.")
         
@@ -483,19 +504,21 @@ def relatorio():
         media3 = sum(notas3) / len(notas3) 
     print(f"Clube da Luta: {media3:.1f}") 
     print("===================================")
-    print(f"\nLista de Críticas sobre o De Volta para o futuro: \n")
+    print(f"\nLista de Críticas sobre o De Volta para o futuro:")
     for j in range(len(critica_list1)):
         if critica_list1[j] != "S/A": 
-            print(f"\n--{critica_list1[j]}")
-    print(f"Lista de Críticas sobre o Interestelar: \n")
+            print(f"\n- {critica_list1[j]}\n\n")
+    print(f"Lista de Críticas sobre o Interestelar:")
     for j in range(len(critica_list2)):
         if critica_list2[j] != "S/A": 
-            print(f"\n--{critica_list2[j]}")
+            print(f"\n- {critica_list2[j]}\n\n")
             
-    print(f"Lista de Críticas sobre o Clube da Luta: \n")
+    print(f"Lista de Críticas sobre o Clube da Luta:")
     for j in range(len(critica_list3)):
         if critica_list3[j] != "S/A": 
-            print(f"\n--{critica_list3[j]}")
+            print(f"\n- {critica_list3[j]}\n\n")
+
+
 def critica(filme):
     if filme == 1:
         critica_list1.append(input("Informe sua resenha: "))
