@@ -12,10 +12,10 @@ f3s2 = []
 # Contadores de assentos disponíveis por sessão
 contf1s1 = 50
 contf1s2 = 50
-contf2s1 = 50
-contf2s2 = 50
-contf3s1 = 50
-contf3s2 = 50
+contf2s1 = 40
+contf2s2 = 40
+contf3s1 = 30
+contf3s2 = 30
 
 # Listas para armazenar os valores dos ingressos vendidos por sessão
 ingf1s1 = []
@@ -71,6 +71,9 @@ def compraring(op):
         print(f"Assentos disponíveis: {contf1s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
         print("====================================================")
         while True:
+            if contf1s1 <= 0:
+                print("Desculpe, não há mais assentos disponíveis para esta sessão.")
+                return
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 ingf1s1.append(20)
@@ -110,6 +113,9 @@ def compraring(op):
         print(f"Assentos disponíveis: {contf1s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
         print("====================================================")
         while True:
+            if contf1s2 <= 0:
+                print("Desculpe, não há mais assentos disponíveis para esta sessão.")
+                return
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 ingf1s2.append(20)
@@ -144,22 +150,25 @@ def compraring(op):
         global contf2s1
         tempf2s1 = 0
         print("\n\nInterestelar - Sessão 1\n====================================================")
-        print(f"Assentos disponíveis: {contf2s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print(f"Assentos disponíveis: {contf2s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$15\n2. Meia: R$7.5\n3. VIP: R$22.5\n4. Confirmar compra\n5. Voltar")
         print("====================================================")   
         while True:
+            if contf2s1 <= 0:
+                print("Desculpe, não há mais assentos disponíveis para esta sessão.")
+                return
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
-                ingf2s1.append(20)
+                ingf2s1.append(15)
                 f2s1.append("int")
                 contf2s1 -= 1
                 tempf2s1 += 1
             elif tipoing == 2:
-                ingf2s1.append(10)
+                ingf2s1.append(7.5)
                 f2s1.append("meia")
                 contf2s1 -= 1
                 tempf2s1 += 1
             elif tipoing == 3:
-                ingf2s1.append(30)
+                ingf2s1.append(22.5)
                 f2s1.append("vip")
                 contf2s1 -= 1
                 tempf2s1 += 1
@@ -180,22 +189,25 @@ def compraring(op):
         global contf2s2
         tempf2s2 = 0
         print("\n\nInterestelar - Sessão 2\n====================================================")
-        print(f"Assentos disponíveis: {contf2s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print(f"Assentos disponíveis: {contf2s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$15\n2. Meia: R$7.5\n3. VIP: R$22.5\n4. Confirmar compra\n5. Voltar")
         print("====================================================")
         while True:
+            if contf2s2 <= 0:
+                print("Desculpe, não há mais assentos disponíveis para esta sessão.")
+                return
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
-                ingf2s2.append(20)
+                ingf2s2.append(15)
                 f2s2.append("int")
                 contf2s2 -= 1
                 tempf2s2 += 1
             elif tipoing == 2:
-                ingf2s2.append(10)
+                ingf2s2.append(7.5)
                 f2s2.append("meia")
                 contf2s2 -= 1
                 tempf2s2 += 1
             elif tipoing == 3:
-                ingf2s2.append(30)
+                ingf2s2.append(22.5)
                 f2s2.append("vip")
                 contf2s2 -= 1
                 tempf2s2 += 1
@@ -216,22 +228,25 @@ def compraring(op):
         global contf3s1
         tempf3s1 = 0
         print("\n\nClube da Luta - Sessão 1\n====================================================")
-        print(f"Assentos disponíveis: {contf3s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print(f"Assentos disponíveis: {contf3s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$10\n2. Meia: R$5\n3. VIP: R$15\n4. Confirmar compra\n5. Voltar")
         print("====================================================")
         while True:
+            if contf3s1 <= 0:
+                print("Desculpe, não há mais assentos disponíveis para esta sessão.")
+                return
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
-                ingf3s1.append(20)
+                ingf3s1.append(10)
                 f3s1.append("int")
                 contf3s1 -= 1
                 tempf3s1 += 1
             elif tipoing == 2:
-                ingf3s1.append(10)
+                ingf3s1.append(5)
                 f3s1.append("meia")
                 contf3s1 -= 1
                 tempf3s1 += 1
             elif tipoing == 3:
-                ingf3s1.append(30)
+                ingf3s1.append(15)
                 f3s1.append("vip")
                 contf3s1 -= 1
                 tempf3s1 += 1
@@ -252,22 +267,25 @@ def compraring(op):
         global contf3s2
         tempf3s2 = 0
         print("\n\nClube da Luta - Sessão 2\n====================================================")
-        print(f"Assentos disponíveis: {contf3s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print(f"Assentos disponíveis: {contf3s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$10\n2. Meia: R$5\n3. VIP: R$15\n4. Confirmar compra\n5. Voltar")
         print("====================================================")
         while True:
+            if contf3s2 <= 0:
+                print("Desculpe, não há mais assentos disponíveis para esta sessão.")
+                return
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
-                ingf3s2.append(20)
+                ingf3s2.append(10)
                 f3s2.append("int")
                 contf3s2 -= 1
                 tempf3s2 += 1
             elif tipoing == 2:
-                ingf3s2.append(10)
+                ingf3s2.append(5)
                 f3s2.append("meia")
                 contf3s2 -= 1
                 tempf3s2 += 1
             elif tipoing == 3:
-                ingf3s2.append(30)
+                ingf3s2.append(15)
                 f3s2.append("vip")
                 contf3s2 -= 1
                 tempf3s2 += 1
