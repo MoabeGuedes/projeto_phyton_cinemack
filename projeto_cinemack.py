@@ -30,6 +30,10 @@ notas1 = []
 notas2 = []
 notas3 = []
 
+critica_list1 = []
+critica_list2 = []
+critica_list3 = []
+
 # Função de entrada do sistema, com menu principal e validação de opções
 def entrada():
     print("\n\nBem vindo ao CineMack! Qual é o seu plano para hoje?")
@@ -56,10 +60,34 @@ def avaliacao_filme():
         nota = int(input("Em uma escala de 0 a 10, como você avaliaria o filme? "))
     if filme == 1:
         notas1.append(nota)
+        op = input("Deseja adicionar uma crítica ao filme? s/n -- ").lower()
+        #validacao
+        while op != "s" and op != "n":
+            op = input("Resposta inválida! digite somente s/n -- ").lower()
+        if op == "n":
+            critica_list1.append("S/A")
+        if op == "s":
+            critica(filme)
     elif filme == 2:
         notas2.append(nota)
+        op = input("Deseja adicionar uma crítica ao filme? s/n -- ").lower()
+        #validacao
+        while op != "s" and op != "n":
+            op = input("Resposta inválida! digite somente s/n -- ").lower()
+        if op == "n":
+            critica_list2.append("S/A")
+        if op == "s":
+            critica(filme)
     elif filme == 3:
         notas3.append(nota)
+        op = input("Deseja adicionar uma crítica ao filme? s/n -- ").lower()
+        #validacao
+        while op != "s" and op != "n":
+            op = input("Resposta inválida! digite somente s/n -- ").lower()
+        if op == "n":
+            critica_list3.append("S/A")
+        if op == "s":
+            critica(filme)
     print(f"Obrigado por avaliar o filme '{filme}' com a nota {nota}!")
 
 # Função para compra de ingressos por sessão, com controle de assentos, confirmação de compra e opção de voltar ao menu principal
@@ -455,7 +483,35 @@ def relatorio():
         media3 = sum(notas3) / len(notas3) 
     print(f"Clube da Luta: {media3:.1f}") 
     print("===================================")
-
+    print(f"\nLista de Críticas sobre o De Volta para o futuro: \n")
+    for j in range(len(critica_list1)):
+        if critica_list1[j] != "S/A": 
+            print(f"\n--{critica_list1[j]}")
+    print(f"Lista de Críticas sobre o Interestelar: \n")
+    for j in range(len(critica_list2)):
+        if critica_list2[j] != "S/A": 
+            print(f"\n--{critica_list2[j]}")
+            
+    print(f"Lista de Críticas sobre o Clube da Luta: \n")
+    for j in range(len(critica_list3)):
+        if critica_list3[j] != "S/A": 
+            print(f"\n--{critica_list3[j]}")
+def critica(filme):
+    if filme == 1:
+        critica_list1.append(input("Informe sua resenha: "))
+        for i in range(len(critica_list1)):
+            while critica_list1[i] == "":
+                critica_list1[i] = input("Resenha vazia! Digite novamente: \n")
+    elif filme == 2:
+        critica_list2.append(input("Informe sua resenha: "))
+        for i in range(len(critica_list2)):
+            while critica_list2[i] == "":
+                critica_list2[i] = input("Resenha vazia! Digite novamente: \n")
+    else:
+        critica_list3.append(input("Informe sua resenha: "))
+        for i in range(len(critica_list3)):
+            while critica_list3[i] == "":
+                critica_list3[i] = input("Resenha vazia! Digite novamente: \n")
 # Função principal
 def main():
     while True: 
