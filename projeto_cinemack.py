@@ -58,7 +58,7 @@ def compraring(op):
         global contf1s1
         tempf1s1 = 0
         print("\n\n====================================================")
-        print(f"De Volta para o Futuro - Sessão 1\nAssentos disponíveis: {contf1s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira\n2. Meia\n3. VIP\n4. Confirmar compra\n5. Voltar")
+        print(f"De Volta para o Futuro - Sessão 1\nAssentos disponíveis: {contf1s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
         print("====================================================")
         while True:
             tipoing = int(input("Escolha o ingresso: "))
@@ -67,20 +67,18 @@ def compraring(op):
                 f1s1.append("int")
                 contf1s1 -= 1
                 tempf1s1 += 1
-                print("Ingresso escolhido: Inteira | Valor: R$20")
             elif tipoing == 2:
                 ingf1s1.append(10)
                 f1s1.append("meia")
                 contf1s1 -= 1
                 tempf1s1 += 1
-                print("Ingresso escolhido: Meia | Valor: R$10")
             elif tipoing == 3:
                 ingf1s1.append(30)
                 f1s1.append("vip")
                 contf1s1 -= 1
                 tempf1s1 += 1
-                print("Ingresso escolhido: Vip | Valor: R$30")
             elif tipoing == 4:
+                print("====================================================")
                 print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf1s1}\nValor da compra: R${sum(ingf1s1[-tempf1s1:])}")
                 print("====================================================")
                 break
@@ -98,7 +96,9 @@ def compraring(op):
     elif op == 2: #Filme 1 - Sessão 2
         global contf1s2
         tempf1s2 = 0
-        print(f"Assentos disponíveis para 'De Volta para o Futuro' - Sessão 2: {contf1s2}\nEscolha o tipo de ingresso (1: Inteira, 2: Meia, 3: VIP, 4: Confirmar compra, 5: Voltar): ")
+        print("\n\n====================================================")
+        print(f"De Volta para o Futuro - Sessão 2\nAssentos disponíveis: {contf1s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print("====================================================")
         while True:
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
@@ -106,6 +106,7 @@ def compraring(op):
                 f1s2.append("int")
                 contf1s2 -= 1
                 tempf1s2 += 1
+
             elif tipoing == 2:
                 ingf1s2.append(10)
                 f1s2.append("meia")
@@ -117,7 +118,9 @@ def compraring(op):
                 contf1s2 -= 1
                 tempf1s2 += 1
             elif tipoing == 4:
-                print(f"Compra confirmada. Total de ingressos comprados: {tempf1s2}")
+                print("====================================================")
+                print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf1s2}\nValor da compra: R${sum(ingf1s2[-tempf1s2:])}")
+                print("====================================================")
                 break
             elif tipoing == 5:
                 contf1s2 += tempf1s2
@@ -130,7 +133,9 @@ def compraring(op):
     elif op == 3: #Filme 2 - Sessão 1
         global contf2s1
         tempf2s1 = 0
-        print(f"Assentos disponíveis para Filme 1 - Sessão 2: {contf2s1}\nEscolha o tipo de ingresso (1: Inteira, 2: Meia, 3: VIP, 4: Confirmar compra, 5: Voltar): ")
+        print("\n\n====================================================")
+        print(f"Interestelar - Sessão 1\nAssentos disponíveis: {contf2s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print("====================================================")   
         while True:
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
@@ -149,7 +154,9 @@ def compraring(op):
                 contf2s1 -= 1
                 tempf2s1 += 1
             elif tipoing == 4:
-                print(f"Compra confirmada. Total de ingressos comprados: {tempf2s1}")
+                print("====================================================")
+                print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf2s1}\nValor da compra: R${sum(ingf2s1[-tempf2s1:])}")
+                print("====================================================")
                 break
             elif tipoing == 5:
                 contf2s1 += tempf2s1
@@ -162,7 +169,9 @@ def compraring(op):
     elif op == 4: #Filme 2 - Sessão 2
         global contf2s2
         tempf2s2 = 0
-        print(f"Assentos disponíveis para Filme 1 - Sessão 2: {contf2s2}\nEscolha o tipo de ingresso (1: Inteira, 2: Meia, 3: VIP, 4: Confirmar compra, 5: Voltar): ")
+        print("\n\n====================================================")
+        print(f"Interestelar - Sessão 2\nAssentos disponíveis: {contf2s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print("====================================================")
         while True:
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
@@ -181,7 +190,9 @@ def compraring(op):
                 contf2s2 -= 1
                 tempf2s2 += 1
             elif tipoing == 4:
-                print(f"Compra confirmada. Total de ingressos comprados: {tempf2s2}")
+                print("====================================================")
+                print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf2s2}\nValor da compra: R${sum(ingf2s2[-tempf2s2:])}")
+                print("====================================================")
                 break
             elif tipoing == 5:
                 contf2s2 += tempf2s2
@@ -194,7 +205,9 @@ def compraring(op):
     elif op == 5: #Filme 3 - Sessão 1
         global contf3s1
         tempf3s1 = 0
-        print(f"Assentos disponíveis para Filme 1 - Sessão 2: {contf3s1}\nEscolha o tipo de ingresso (1: Inteira, 2: Meia, 3: VIP, 4: Confirmar compra, 5: Voltar): ")
+        print("\n\n====================================================")
+        print(f"Filme 3 - Sessão 1\nAssentos disponíveis: {contf3s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print("====================================================")
         while True:
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
@@ -213,7 +226,9 @@ def compraring(op):
                 contf3s1 -= 1
                 tempf3s1 += 1
             elif tipoing == 4:
-                print(f"Compra confirmada. Total de ingressos comprados: {tempf3s1}")
+                print("====================================================")
+                print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf3s1}\nValor da compra: R${sum(ingf3s1[-tempf3s1:])}")
+                print("====================================================")
                 break
             elif tipoing == 5:
                 contf3s1 += tempf3s1
@@ -226,7 +241,9 @@ def compraring(op):
     elif op == 6: #Filme 3 - Sessão 2
         global contf3s2
         tempf3s2 = 0
-        print(f"Assentos disponíveis para Filme 1 - Sessão 2: {contf3s2}\nEscolha o tipo de ingresso (1: Inteira, 2: Meia, 3: VIP, 4: Confirmar compra, 5: Voltar): ")
+        print("\n\n====================================================")
+        print(f"Filme 3 - Sessão 2\nAssentos disponíveis: {contf3s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print("====================================================")
         while True:
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
@@ -245,7 +262,9 @@ def compraring(op):
                 contf3s2 -= 1
                 tempf3s2 += 1
             elif tipoing == 4:
-                print(f"Compra confirmada. Total de ingressos comprados: {tempf3s2}")
+                print("====================================================")
+                print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf3s2}\nValor da compra: R${sum(ingf3s2[-tempf3s2:])}")
+                print("====================================================")
                 break
             elif tipoing == 5:
                 contf3s2 += tempf3s2
@@ -260,11 +279,12 @@ def compraring(op):
 
 
 def relatorio():
-    print("-----RELATORIO FINAL-----")
+    print("\n\n\n\n\n\n-----RELATORIO DIÁRIO-----")
     cont = 1
     quant_int = quant_meia = quant_vip = 0
     valor_int = valor_meia = valor_vip = 0
-    print(f"Filme 1 - Sessão 1")
+    print(f"\n\nDe Volta para o Futuro - Sessão 1")
+    print("===================================")
     for j in range(len(f1s1)):
         if f1s1[j] == "int":
             quant_int += 1
@@ -276,15 +296,18 @@ def relatorio():
             quant_vip += 1
             valor_vip += 30
         
-    print("Quantidade de ingressos vendidos")
-    print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
-    print(f"RECEITA POR TIPO (Sessão {cont})")
-    print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
+    print("Quantidade de ingressos vendidos:")
+    print(f"Inteira - {quant_int}\nMeia - {quant_meia}\nVIP - {quant_vip}\n")
+    print(f"Receita:")
+    print(f"Inteira - R${valor_int}\nMeia - R${valor_meia}\nVIP - R${valor_vip}")
+    print("===================================")
+
     
     quant_int = quant_meia = quant_vip = 0
     valor_int = valor_meia = valor_vip = 0
 
-    print(f"Filme 1 - Sessão 2")
+    print(f"\n\n\n\nDe Volta para o Futuro - Sessão 2")
+    print("===================================")
     for j in range(len(f1s2)):
         if f1s2[j] == "int":
             quant_int += 1
@@ -296,15 +319,16 @@ def relatorio():
             quant_vip += 1
             valor_vip += 30
 
-    print("Quantidade de ingressos vendidos")
-    print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
-    print(f"RECEITA POR TIPO (Sessão {cont})")
-    print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
-    
+    print("Quantidade de ingressos vendidos:")
+    print(f"Inteira - {quant_int}\nMeia - {quant_meia}\nVIP - {quant_vip}\n")
+    print(f"Receita:")
+    print(f"Inteira - R${valor_int}\nMeia - R${valor_meia}\nVIP - R${valor_vip}")
+    print("===================================")
     quant_int = quant_meia = quant_vip = 0
     valor_int = valor_meia = valor_vip = 0
     
-    print(f"Filme 2 - Sessão 1")
+    print(f"\n\n\n\nInterestelar - Sessão 1")
+    print("===================================")
     for j in range(len(f2s1)):
         if f2s1[j] == "int":
             quant_int += 1
@@ -316,15 +340,17 @@ def relatorio():
             quant_vip += 1
             valor_vip += 30
         
-    print("Quantidade de ingressos vendidos")
-    print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
-    print(f"RECEITA POR TIPO (Sessão {cont})")
-    print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
+    print("Quantidade de ingressos vendidos:")
+    print(f"Inteira - {quant_int}\nMeia - {quant_meia}\nVIP - {quant_vip}\n")
+    print(f"Receita:")
+    print(f"Inteira - R${valor_int}\nMeia - R${valor_meia}\nVIP - R${valor_vip}")
+    print("===================================")
 
     quant_int = quant_meia = quant_vip = 0
     valor_int = valor_meia = valor_vip = 0
 
-    print(f"Filme 2 - Sessão 2")
+    print(f"\n\n\n\nInterestelar - Sessão 2")
+    print("===================================")
     for j in range(len(f2s2)):
         if f2s2[j] == "int":
             quant_int += 1
@@ -336,15 +362,17 @@ def relatorio():
             quant_vip += 1
             valor_vip += 30
 
-    print("Quantidade de ingressos vendidos")
-    print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
-    print(f"RECEITA POR TIPO (Sessão {cont})")
-    print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
+    print("Quantidade de ingressos vendidos:")
+    print(f"Inteira - {quant_int}\nMeia - {quant_meia}\nVIP - {quant_vip}\n")
+    print(f"Receita:")
+    print(f"Inteira - R${valor_int}\nMeia - R${valor_meia}\nVIP - R${valor_vip}")
+    print("===================================")
 
     quant_int = quant_meia = quant_vip = 0
     valor_int = valor_meia = valor_vip = 0
 
-    print(f"Filme 3 - Sessão 1")
+    print(f"\n\n\n\nClube da Luta - Sessão 1")
+    print("===================================")
     for j in range(len(f3s1)):
         if f3s1[j] == "int":
             quant_int += 1
@@ -356,15 +384,17 @@ def relatorio():
             quant_vip += 1
             valor_vip += 30
         
-    print("Quantidade de ingressos vendidos")
-    print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
-    print(f"RECEITA POR TIPO (Sessão {cont})")
-    print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
+    print("Quantidade de ingressos vendidos:")
+    print(f"Inteira - {quant_int}\nMeia - {quant_meia}\nVIP - {quant_vip}\n")
+    print(f"Receita:")
+    print(f"Inteira - R${valor_int}\nMeia - R${valor_meia}\nVIP - R${valor_vip}")
+    print("===================================")
 
     quant_int = quant_meia = quant_vip = 0
     valor_int = valor_meia = valor_vip = 0
 
-    print(f"Filme 3 - Sessão 2")
+    print(f"\n\n\n\nClube da Luta - Sessão 2")
+    print("===================================")
     for j in range(len(f3s2)):
         if f3s2[j] == "int":
             quant_int += 1
@@ -376,26 +406,34 @@ def relatorio():
             quant_vip += 1
             valor_vip += 30
 
-    print("Quantidade de ingressos vendidos")
-    print(f"INTEIRA - {quant_int}\nMEIA - {quant_meia}\nVIP - {quant_vip}\n")
-    print(f"RECEITA POR TIPO (Sessão {cont})")
-    print(f"INTEIRA - {valor_int}\nMEIA - {valor_meia}\nVIP - {valor_vip}\n")
+    print("Quantidade de ingressos vendidos:")
+    print(f"Inteira - {quant_int}\nMeia - {quant_meia}\nVIP - {quant_vip}\n")
+    print(f"Receita:")
+    print(f"Inteira - R${valor_int}\nMeia - R${valor_meia}\nVIP - R${valor_vip}")
+    print("===================================")
+        
 
+    print(f"\n\n\n\nTOTAL DO DIA")
+    print("===================================")
+    total_ingressos = (len(f1s1) + len(f1s2) + len(f2s1) + len(f2s2) + len(f3s1) + len(f3s2))
+    print(f"Total de ingressos vendidos: {total_ingressos}")
+    receita_total = sum(ingf1s1) + sum(ingf1s2) + sum(ingf2s1) + sum(ingf2s2) + sum(ingf3s1) + sum(ingf3s2)
+    print(f"Receita total: R${receita_total}")
+    print("===================================")
+
+    
+    print(f"\n\n\n\nMÉDIA DAS AVALIAÇÕES DOS FILMES")
+    print("===================================")
     media1 = media2 = media3 = 0
     for j in range(len(notas1)):
         media1 = sum(notas1) / len(notas1)
-    print(f"Média de avaliações:\nFilme 1: {media1:.1f}")
+    print(f"De Volta para o Futuro: {media1:.1f}")
     for j in range(len(notas2)):
         media2 = sum(notas2) / len(notas2) 
-    print(f"Filme 2: {media2:.1f}")
+    print(f"Interestelar: {media2:.1f}")
     for j in range(len(notas3)):
         media3 = sum(notas3) / len(notas3) 
-    print(f"Filme 3: {media3:.1f}")         
-
-    total_ingressos = (len(f1s1) + len(f1s2) + len(f2s1) + len(f2s2) + len(f3s1) + len(f3s2))
-    print(f"Total de ingressos vendidos no dia: {total_ingressos}")
-    receita_total = sum(ingf1s1) + sum(ingf1s2) + sum(ingf2s1) + sum(ingf2s2) + sum(ingf3s1) + sum(ingf3s2)
-    print(f"Receita total do dia: {receita_total}")
+    print(f"Clube da Luta: {media3:.1f}") 
 
 def main():
     while True: 
