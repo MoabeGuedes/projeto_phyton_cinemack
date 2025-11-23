@@ -34,7 +34,7 @@ notas3 = []
 def entrada():
     print("\n\nBem vindo ao CineMack! Qual é o seu plano para hoje?")
     print("====================================================")
-    print("1. Comprar ingressos para 'De Volta para o Futuro' - Sessão 1\n2. Comprar ingressos para 'De Volta para o Futuro' - Sessão 2\n3. Comprar ingressos para Filme 2 - Sessão 1\n4. Comprar ingressos para Filme 2 - Sessão 2\n5. Comprar ingressos para Filme 3 - Sessão 1\n6. Comprar ingressos para Filme 3 - Sessão 2\n7. Avaliar um filme\n8. Encerrar o dia e exibir o relatório")
+    print("1. Comprar ingressos para De Volta para o Futuro - Sessão 1\n2. Comprar ingressos para De Volta para o Futuro - Sessão 2\n3. Comprar ingressos para Interestelar - Sessão 1\n4. Comprar ingressos para Interestelar - Sessão 2\n5. Comprar ingressos para Clube da Luta - Sessão 1\n6. Comprar ingressos para Clube da Luta - Sessão 2\n7. Avaliar um filme\n8. Encerrar o dia e exibir o relatório")
     print("====================================================")
     op = int(input("Escolha a opção desejada: "))
     while op <=0 or op >= 9:
@@ -43,7 +43,9 @@ def entrada():
     
 # Função para avaliação dos filmes com validação de entradas
 def avaliacao_filme():
-    print("Obrigado por assistir ao filme no CineMack!")
+    print("Obrigado por assistir o filme conosco!\nPara avaliar o filme que voce assistiu, escolha uma das opções abaixo:")
+    print("====================================================")
+    print("1. De Volta para o Futuro\n2. Interestelar\n3. Clube da Luta")
     filme = int(input("Por favor, digite o numero do filme que você assistiu: "))
     while filme < 1 or filme > 3:
         print("Filme inválido. Por favor, tente novamente.")
@@ -65,8 +67,8 @@ def compraring(op):
     if op == 1: #Filme 1 - Sessão 1
         global contf1s1
         tempf1s1 = 0
-        print("\n\n====================================================")
-        print(f"De Volta para o Futuro - Sessão 1\nAssentos disponíveis: {contf1s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print("\n\nDe Volta para o Futuro - Sessão 1\n====================================================")
+        print(f"Assentos disponíveis: {contf1s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
         print("====================================================")
         while True:
             tipoing = int(input("Escolha o ingresso: "))
@@ -104,8 +106,8 @@ def compraring(op):
     elif op == 2: #Filme 1 - Sessão 2
         global contf1s2
         tempf1s2 = 0
-        print("\n\n====================================================")
-        print(f"De Volta para o Futuro - Sessão 2\nAssentos disponíveis: {contf1s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print("\n\nDe Volta para o Futuro - Sessão 2\n====================================================")
+        print(f"Assentos disponíveis: {contf1s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
         print("====================================================")
         while True:
             tipoing = int(input("Escolha o ingresso: "))
@@ -141,8 +143,8 @@ def compraring(op):
     elif op == 3: #Filme 2 - Sessão 1
         global contf2s1
         tempf2s1 = 0
-        print("\n\n====================================================")
-        print(f"Interestelar - Sessão 1\nAssentos disponíveis: {contf2s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print("\n\nInterestelar - Sessão 1\n====================================================")
+        print(f"Assentos disponíveis: {contf2s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
         print("====================================================")   
         while True:
             tipoing = int(input("Escolha o ingresso: "))
@@ -177,8 +179,8 @@ def compraring(op):
     elif op == 4: #Filme 2 - Sessão 2
         global contf2s2
         tempf2s2 = 0
-        print("\n\n====================================================")
-        print(f"Interestelar - Sessão 2\nAssentos disponíveis: {contf2s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print("\n\nInterestelar - Sessão 2\n====================================================")
+        print(f"Assentos disponíveis: {contf2s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
         print("====================================================")
         while True:
             tipoing = int(input("Escolha o ingresso: "))
@@ -213,8 +215,8 @@ def compraring(op):
     elif op == 5: #Filme 3 - Sessão 1
         global contf3s1
         tempf3s1 = 0
-        print("\n\n====================================================")
-        print(f"Filme 3 - Sessão 1\nAssentos disponíveis: {contf3s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print("\n\nClube da Luta - Sessão 1\n====================================================")
+        print(f"Assentos disponíveis: {contf3s1}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
         print("====================================================")
         while True:
             tipoing = int(input("Escolha o ingresso: "))
@@ -249,8 +251,8 @@ def compraring(op):
     elif op == 6: #Filme 3 - Sessão 2
         global contf3s2
         tempf3s2 = 0
-        print("\n\n====================================================")
-        print(f"Filme 3 - Sessão 2\nAssentos disponíveis: {contf3s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
+        print("\n\nClube da Luta - Sessão 2\n====================================================")
+        print(f"Assentos disponíveis: {contf3s2}\n\nEscolha o seu ingresso!(Um por vez)\n1. Inteira: R$20\n2. Meia: R$10\n3. VIP: R$30\n4. Confirmar compra\n5. Voltar")
         print("====================================================")
         while True:
             tipoing = int(input("Escolha o ingresso: "))
