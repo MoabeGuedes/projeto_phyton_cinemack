@@ -110,37 +110,34 @@ def compraring(op):
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 lugar = int(input(f"Escolha o seu assento (0-50): "))
-                while contf1s1[lugar] == 1 or lugar < 0 or lugar > 50:
+                while lugar < 0 or lugar >= len(contf1s1) or contf1s1[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-50): "))
-                else:
-                    ingf1s1.append(20)
-                    f1s1.append("int")
-                    contf1s1[lugar] = 1
-                    tempf1s1 += 1
-                    tempocupado.append(lugar)
+                ingf1s1.append(20)
+                f1s1.append("int")
+                contf1s1[lugar] = 1
+                tempf1s1 += 1
+                tempocupado.append(lugar)
             elif tipoing == 2:
                 lugar = int(input(f"Escolha o seu assento (0-50): "))
-                while contf1s1[lugar] == 1 or lugar < 0 or lugar > 50:
+                while lugar < 0 or lugar >= len(contf1s1) or contf1s1[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-50): "))
-                else:
-                    ingf1s1.append(10)
-                    f1s1.append("meia")
-                    contf1s1[lugar] = 1
+                ingf1s1.append(10)
+                f1s1.append("meia")
+                contf1s1[lugar] = 1
                 tempf1s1 += 1
                 tempocupado.append(lugar)
             elif tipoing == 3:
                 lugar = int(input(f"Escolha o seu assento (0-50): "))
-                while contf1s1[lugar] == 1 or lugar < 0 or lugar > 50:
+                while lugar < 0 or lugar >= len(contf1s1) or contf1s1[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-50): "))
-                else:
-                    ingf1s1.append(30)
-                    f1s1.append("vip")
-                    contf1s1[lugar] = 1
-                    tempf1s1 += 1
-                    tempocupado.append(lugar)
+                ingf1s1.append(30)
+                f1s1.append("vip")
+                contf1s1[lugar] = 1
+                tempf1s1 += 1
+                tempocupado.append(lugar)
             elif tipoing == 4:
                 print("====================================================")
                 print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf1s1}\nValor da compra: R${sum(ingf1s1[-tempf1s1:])}")
@@ -174,38 +171,35 @@ def compraring(op):
             if tipoing == 1:
                 lugar = int(input(f"Escolha o seu assento (0-50): "))
               
-                while contf1s2[lugar] == 1 or lugar < 0 or lugar > 50:
+                while lugar < 0 or lugar >= len(contf1s2) or contf1s2[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-50): "))
  
-                else:
-                    ingf1s2.append(20)
-                    f1s2.append("int")
-                    contf1s2[lugar] = 1
-                    tempf1s2 += 1
-                    tempocupado.append(lugar)
+                ingf1s2.append(20)
+                f1s2.append("int")
+                contf1s2[lugar] = 1
+                tempf1s2 += 1
+                tempocupado.append(lugar)
             elif tipoing == 2:
                 lugar = int(input(f"Escolha o seu assento (0-50): "))
-                while contf1s2[lugar] == 1 or lugar < 0 or lugar > 50:
+                while lugar < 0 or lugar >= len(contf1s2) or contf1s2[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-50): "))
-                else:
-                    ingf1s2.append(10)
-                    f1s2.append("meia")
-                    contf1s2[lugar] = 1
-                    tempf1s2 += 1
-                    tempocupado.append(lugar)
+                ingf1s2.append(10)
+                f1s2.append("meia")
+                contf1s2[lugar] = 1
+                tempf1s2 += 1
+                tempocupado.append(lugar)
             elif tipoing == 3:
                 lugar = int(input(f"Escolha o seu assento (0-50): "))
-                while contf1s2[lugar] == 1 or lugar < 0 or lugar > 50:
+                while lugar < 0 or lugar >= len(contf1s2) or contf1s2[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-50): "))
-                else:
-                    ingf1s2.append(30)
-                    f1s2.append("vip")
-                    contf1s2[lugar] = 1
-                    tempf1s2 += 1
-                    tempocupado.append(lugar)
+                ingf1s2.append(30)
+                f1s2.append("vip")
+                contf1s2[lugar] = 1
+                tempf1s2 += 1
+                tempocupado.append(lugar)
             elif tipoing == 4:
                 print("====================================================")
                 print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf1s2}\nValor da compra: R${sum(ingf1s2[-tempf1s2:])}")
@@ -237,37 +231,34 @@ def compraring(op):
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 lugar = int(input(f"Escolha o seu assento (0-40): "))
-                while contf2s1[lugar] == 1 or lugar < 0 or lugar > 40:
+                while lugar < 0 or lugar >= len(contf2s1) or contf2s1[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-40): "))
-                else:
-                    ingf2s1.append(15)
-                    f2s1.append("int")
-                    contf2s1[lugar] = 1
-                    tempf2s1 += 1
-                    tempocupado.append(lugar)
+                ingf2s1.append(15)
+                f2s1.append("int")
+                contf2s1[lugar] = 1
+                tempf2s1 += 1
+                tempocupado.append(lugar)
             elif tipoing == 2:
                 lugar = int(input(f"Escolha o seu assento (0-40): "))
-                while contf2s1[lugar] == 1 or lugar < 0 or lugar > 40:
+                while lugar < 0 or lugar >= len(contf2s1) or contf2s1[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-40): "))
-                else:
-                    ingf2s1.append(7.5)
-                    f2s1.append("meia")
-                    contf2s1[lugar] = 1
-                    tempf2s1 += 1
-                    tempocupado.append(lugar)
+                ingf2s1.append(7.5)
+                f2s1.append("meia")
+                contf2s1[lugar] = 1
+                tempf2s1 += 1
+                tempocupado.append(lugar)
             elif tipoing == 3:
                 lugar = int(input(f"Escolha o seu assento (0-40): "))
-                while contf2s1[lugar] == 1 or lugar < 0 or lugar > 40:
+                while lugar < 0 or lugar >= len(contf2s1) or contf2s1[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-40): "))
-                else:
-                    ingf2s1.append(22.5)
-                    f2s1.append("vip")
-                    contf2s1[lugar] = 1
-                    tempf2s1 += 1
-                    tempocupado.append(lugar)
+                ingf2s1.append(22.5)
+                f2s1.append("vip")
+                contf2s1[lugar] = 1
+                tempf2s1 += 1
+                tempocupado.append(lugar)
             elif tipoing == 4:
                 print("====================================================")
                 print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf2s1}\nValor da compra: R${sum(ingf2s1[-tempf2s1:])}")
@@ -299,37 +290,34 @@ def compraring(op):
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 lugar = int(input(f"Escolha o seu assento (0-40): "))
-                while contf2s2[lugar] == 1 or lugar < 0 or lugar > 40:
+                while lugar < 0 or lugar >= len(contf2s2) or contf2s2[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-40): "))
-                else:
-                    ingf2s2.append(15)
-                    f2s2.append("int")
-                    contf2s2[lugar] = 1
-                    tempf2s2 += 1
-                    tempocupado.append(lugar)
+                ingf2s2.append(15)
+                f2s2.append("int")
+                contf2s2[lugar] = 1
+                tempf2s2 += 1
+                tempocupado.append(lugar)
             elif tipoing == 2:
                 lugar = int(input(f"Escolha o seu assento (0-40): "))
-                while contf2s2[lugar] == 1 or lugar < 0 or lugar > 40:
+                while lugar < 0 or lugar >= len(contf2s2) or contf2s2[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-40): "))
-                else:
-                    ingf2s2.append(7.5)
-                    f2s2.append("meia")
-                    contf2s2[lugar] = 1
-                    tempf2s2 += 1
-                    tempocupado.append(lugar)
+                ingf2s2.append(7.5)
+                f2s2.append("meia")
+                contf2s2[lugar] = 1
+                tempf2s2 += 1
+                tempocupado.append(lugar)
             elif tipoing == 3:
                 lugar = int(input(f"Escolha o seu assento (0-40): "))
-                while contf2s2[lugar] == 1 or lugar < 0 or lugar > 40:
+                while lugar < 0 or lugar >= len(contf2s2) or contf2s2[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-40): "))
-                else:
-                    ingf2s2.append(22.5)
-                    f2s2.append("vip")
-                    contf2s2[lugar] = 1
-                    tempf2s2 += 1
-                    tempocupado.append(lugar)
+                ingf2s2.append(22.5)
+                f2s2.append("vip")
+                contf2s2[lugar] = 1
+                tempf2s2 += 1
+                tempocupado.append(lugar)
             elif tipoing == 4:
                 print("====================================================")
                 print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf2s2}\nValor da compra: R${sum(ingf2s2[-tempf2s2:])}")
@@ -361,37 +349,34 @@ def compraring(op):
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 lugar = int(input(f"Escolha o seu assento (0-30): "))
-                while contf3s1[lugar] == 1 or lugar < 0 or lugar > 30:
+                while lugar < 0 or lugar >= len(contf3s1) or contf3s1[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-30): "))
-                else:
-                    ingf3s1.append(10)
-                    f3s1.append("int")
-                    contf3s1[lugar] = 1
-                    tempf3s1 += 1
-                    tempocupado.append(lugar)
+                ingf3s1.append(10)
+                f3s1.append("int")
+                contf3s1[lugar] = 1
+                tempf3s1 += 1
+                tempocupado.append(lugar)
             elif tipoing == 2:
                 lugar = int(input(f"Escolha o seu assento (0-30): "))
-                while contf3s1[lugar] == 1 or lugar < 0 or lugar > 30:
+                while lugar < 0 or lugar >= len(contf3s1) or contf3s1[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-30): "))
-                else:
-                    ingf3s1.append(5)
-                    f3s1.append("meia")
-                    contf3s1[lugar] = 1
-                    tempf3s1 += 1
-                    tempocupado.append(lugar)
+                ingf3s1.append(5)
+                f3s1.append("meia")
+                contf3s1[lugar] = 1
+                tempf3s1 += 1
+                tempocupado.append(lugar)
             elif tipoing == 3:
                 lugar = int(input(f"Escolha o seu assento (0-30): "))
-                while contf3s1[lugar] == 1 or lugar < 0 or lugar > 30:
+                while lugar < 0 or lugar >= len(contf3s1) or contf3s1[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-30): "))
-                else:
-                    ingf3s1.append(15)
-                    f3s1.append("vip")
-                    contf3s1[lugar] = 1
-                    tempf3s1 += 1
-                    tempocupado.append(lugar)
+                ingf3s1.append(15)
+                f3s1.append("vip")
+                contf3s1[lugar] = 1
+                tempf3s1 += 1
+                tempocupado.append(lugar)
             elif tipoing == 4:
                 print("====================================================")
                 print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf3s1}\nValor da compra: R${sum(ingf3s1[-tempf3s1:])}")
@@ -423,37 +408,34 @@ def compraring(op):
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 lugar = int(input(f"Escolha o seu assento (0-30): "))
-                while contf3s2[lugar] == 1 or lugar < 0 or lugar > 30:
+                while lugar < 0 or lugar >= len(contf3s2) or contf3s2[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-30): "))
-                else:
-                    ingf3s2.append(10)
-                    f3s2.append("int")
-                    contf3s2[lugar] = 1
-                    tempf3s2 += 1
-                    tempocupado.append(lugar)
+                ingf3s2.append(10)
+                f3s2.append("int")
+                contf3s2[lugar] = 1
+                tempf3s2 += 1
+                tempocupado.append(lugar)
             elif tipoing == 2:
                 lugar = int(input(f"Escolha o seu assento (0-30): "))
-                while contf3s2[lugar] == 1 or lugar < 0 or lugar > 30:
+                while lugar < 0 or lugar >= len(contf3s2) or contf3s2[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-30): "))
-                else:
-                    ingf3s2.append(5)
-                    f3s2.append("meia")
-                    contf3s2[lugar] = 1
-                    tempf3s2 += 1
-                    tempocupado.append(lugar)
+                ingf3s2.append(5)
+                f3s2.append("meia")
+                contf3s2[lugar] = 1
+                tempf3s2 += 1
+                tempocupado.append(lugar)
             elif tipoing == 3:
                 lugar = int(input(f"Escolha o seu assento (0-30): "))
-                while contf3s2[lugar] == 1 or lugar < 0 or lugar > 30:
+                while lugar < 0 or lugar >= len(contf3s2) or contf3s2[lugar] == 1:
                     print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-30): "))
-                else:
-                    ingf3s2.append(15)
-                    f3s2.append("vip")
-                    contf3s2[lugar] = 1
-                    tempf3s2 += 1
-                    tempocupado.append(lugar)
+                ingf3s2.append(15)
+                f3s2.append("vip")
+                contf3s2[lugar] = 1
+                tempf3s2 += 1
+                tempocupado.append(lugar)
             elif tipoing == 4:
                 print("====================================================")
                 print(f"Obrigado por comprar no CineMack!\nTotal de ingressos comprados: {tempf3s2}\nValor da compra: R${sum(ingf3s2[-tempf3s2:])}")
