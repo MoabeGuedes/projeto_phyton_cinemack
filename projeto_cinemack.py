@@ -173,15 +173,11 @@ def compraring(op):
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 lugar = int(input(f"Escolha o seu assento (0-50): "))
-                while lugar < 0 or lugar > 50:
-                        print("Assento inválido. Por favor, escolha um assento entre 0 e 50.")
-                        lugar = int(input(f"Escolha o seu assento (0-50): "))
-                while contf1s2[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+              
+                while contf1s2[lugar] == 1 or lugar < 0 or lugar > 50:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-50): "))
-                    while lugar < 0 or lugar > 50:
-                        print("Assento inválido. Por favor, escolha um assento entre 0 e 50.")
-                        lugar = int(input(f"Escolha o seu assento (0-50): "))
+ 
                 else:
                     ingf1s2.append(20)
                     f1s2.append("int")
@@ -190,8 +186,8 @@ def compraring(op):
                     tempocupado.append(lugar)
             elif tipoing == 2:
                 lugar = int(input(f"Escolha o seu assento (0-50): "))
-                while contf1s2[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf1s2[lugar] == 1 or lugar < 0 or lugar > 50:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-50): "))
                 else:
                     ingf1s2.append(10)
@@ -201,8 +197,8 @@ def compraring(op):
                     tempocupado.append(lugar)
             elif tipoing == 3:
                 lugar = int(input(f"Escolha o seu assento (0-50): "))
-                while contf1s2[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf1s2[lugar] == 1 or lugar < 0 or lugar > 50:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-50): "))
                 else:
                     ingf1s2.append(30)
@@ -241,8 +237,8 @@ def compraring(op):
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 lugar = int(input(f"Escolha o seu assento (0-40): "))
-                while contf2s1[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf2s1[lugar] == 1 or lugar < 0 or lugar > 40:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-40): "))
                 else:
                     ingf2s1.append(15)
@@ -252,8 +248,8 @@ def compraring(op):
                     tempocupado.append(lugar)
             elif tipoing == 2:
                 lugar = int(input(f"Escolha o seu assento (0-40): "))
-                while contf2s1[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf2s1[lugar] == 1 or lugar < 0 or lugar > 40:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-40): "))
                 else:
                     ingf2s1.append(7.5)
@@ -263,8 +259,8 @@ def compraring(op):
                     tempocupado.append(lugar)
             elif tipoing == 3:
                 lugar = int(input(f"Escolha o seu assento (0-40): "))
-                while contf2s1[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf2s1[lugar] == 1 or lugar < 0 or lugar > 40:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-40): "))
                 else:
                     ingf2s1.append(22.5)
@@ -303,8 +299,8 @@ def compraring(op):
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 lugar = int(input(f"Escolha o seu assento (0-40): "))
-                while contf2s2[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf2s2[lugar] == 1 or lugar < 0 or lugar > 40:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-40): "))
                 else:
                     ingf2s2.append(15)
@@ -314,8 +310,8 @@ def compraring(op):
                     tempocupado.append(lugar)
             elif tipoing == 2:
                 lugar = int(input(f"Escolha o seu assento (0-40): "))
-                while contf2s2[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf2s2[lugar] == 1 or lugar < 0 or lugar > 40:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-40): "))
                 else:
                     ingf2s2.append(7.5)
@@ -325,8 +321,8 @@ def compraring(op):
                     tempocupado.append(lugar)
             elif tipoing == 3:
                 lugar = int(input(f"Escolha o seu assento (0-40): "))
-                while contf2s2[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf2s2[lugar] == 1 or lugar < 0 or lugar > 40:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-40): "))
                 else:
                     ingf2s2.append(22.5)
@@ -365,8 +361,8 @@ def compraring(op):
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 lugar = int(input(f"Escolha o seu assento (0-30): "))
-                while contf3s1[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf3s1[lugar] == 1 or lugar < 0 or lugar > 30:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-30): "))
                 else:
                     ingf3s1.append(10)
@@ -376,8 +372,8 @@ def compraring(op):
                     tempocupado.append(lugar)
             elif tipoing == 2:
                 lugar = int(input(f"Escolha o seu assento (0-30): "))
-                while contf3s1[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf3s1[lugar] == 1 or lugar < 0 or lugar > 30:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-30): "))
                 else:
                     ingf3s1.append(5)
@@ -387,8 +383,8 @@ def compraring(op):
                     tempocupado.append(lugar)
             elif tipoing == 3:
                 lugar = int(input(f"Escolha o seu assento (0-30): "))
-                while contf3s1[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf3s1[lugar] == 1 or lugar < 0 or lugar > 30:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-30): "))
                 else:
                     ingf3s1.append(15)
@@ -427,8 +423,8 @@ def compraring(op):
             tipoing = int(input("Escolha o ingresso: "))
             if tipoing == 1:
                 lugar = int(input(f"Escolha o seu assento (0-30): "))
-                while contf3s2[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf3s2[lugar] == 1 or lugar < 0 or lugar > 30:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-30): "))
                 else:
                     ingf3s2.append(10)
@@ -438,8 +434,8 @@ def compraring(op):
                     tempocupado.append(lugar)
             elif tipoing == 2:
                 lugar = int(input(f"Escolha o seu assento (0-30): "))
-                while contf3s2[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf3s2[lugar] == 1 or lugar < 0 or lugar > 30:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-30): "))
                 else:
                     ingf3s2.append(5)
@@ -449,8 +445,8 @@ def compraring(op):
                     tempocupado.append(lugar)
             elif tipoing == 3:
                 lugar = int(input(f"Escolha o seu assento (0-30): "))
-                while contf3s2[lugar] == 1:
-                    print("Desculpe, este assento já está ocupado. Por favor, escolha outro assento.")
+                while contf3s2[lugar] == 1 or lugar < 0 or lugar > 30:
+                    print("Desculpe, assento inválido ou ocupado. Por favor, escolha outro assento.")
                     lugar = int(input(f"Escolha o seu assento (0-30): "))
                 else:
                     ingf3s2.append(15)
