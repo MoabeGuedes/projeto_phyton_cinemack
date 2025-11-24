@@ -30,6 +30,7 @@ notas1 = []
 notas2 = []
 notas3 = []
 
+# Listas para armazenar as críticas dos filmes
 critica_list1 = []
 critica_list2 = []
 critica_list3 = []
